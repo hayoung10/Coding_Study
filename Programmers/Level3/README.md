@@ -6,9 +6,11 @@ Level 3 코딩테스트 연습
 
 
 ### 목차
-- [동적계획법](#동적계획법Dynamic-Programming-DP)  
+- 동적계획법
   - [1. 정수 삼각형](#1-정수-삼각형)  
   - [2. 등굣길](#2-등굣길)  
+- 깊이/너비 우선 탐색
+  - [1. 네트워크](#1-네트워크)
 <br>
 
 # 문제
@@ -50,11 +52,33 @@ Level 3 코딩테스트 연습
 <img src="https://user-images.githubusercontent.com/39071652/126125781-02ad7346-c16c-4f82-be6c-9384eed6d9fb.png" width="200">  
 
 ###### 코드 : [Way_to_School.cpp](./Way_to_School.cpp)
+<br>
 
+### 깊이/너비 우선 탐색(Depth/Breadth First Search); DFS/BFS
+## 1. 네트워크
+네트워크란 컴퓨터 상호 간에 정보를 교환할 수 있도록 연결된 형태를 의미합니다. 예를 들어, 컴퓨터 A와 컴퓨터 B가 직접적으로 연결되어있고, 컴퓨터 B와 컴퓨터 C가 직접적으로 연결되어 있을 때 컴퓨터 A와 컴퓨터 C도 간접적으로 연결되어 정보를 교환할 수 있습니다. 따라서 컴퓨터 A, B, C는 모두 같은 네트워크 상에 있다고 할 수 있습니다. 컴퓨터의 개수 n, 연결에 대한 정보가 담긴 2차원 배열 computers가 매개변수로 주어질 때, 네트워크의 개수를 return 하도록 solution 함수를 작성하시오.  
 
+###### 제한사항
+  + 컴퓨터의 개수 n은 1 이상 200 이하인 자연수입니다.
+  + 각 컴퓨터는 0부터 n-1인 정수로 표현합니다.
+  + i번 컴퓨터와 j번 컴퓨터가 연결되어 있으면 computers[i][j]를 1로 표현합니다.
+  + computers[i][i]는 항상 1입니다.
+
+###### 입출력 예
+|n|computers|return|
+|:---|:---|:---|
+|3|[[1,1,0],[1,1,0],[0,0,1]]|2|
+|3|[[1,1,0],[1,1,1],[0,1,1]]|1|
+
+###### 입출력 예 설명
+<img src="https://user-images.githubusercontent.com/39071652/126175476-c3261948-49cf-4b67-a9ec-91e017040e6a.png" width="200"> <img src="https://user-images.githubusercontent.com/39071652/126175589-0c6a1f4e-31fb-4831-a595-e8d26a59519d.png" width="200">  
+(왼쪽 그림 : 네트워크 2개 / 오른쪽 그림 : 네트워크 1개)
+
+###### 코드 : [Network.cpp](./Network.cpp)
 
 --------
 <br>
+
 ##### 문제출처 및 이용 사이트
 > 프로그래머스 [Programmers](https://programmers.co.kr)  
 
