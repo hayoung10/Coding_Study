@@ -29,16 +29,16 @@ Level 3 코딩테스트 연습
   + *2ms 시점에 6ms가 소요되는 C작업 요청*  
 
 와 같은 요청이 들어왔습니다. 이를 그림으로 표현하면 아래와 같습니다.  
-<img src="https://user-images.githubusercontent.com/39071652/126661333-eb9f5d1c-d850-459e-b246-2208ee4ac0ba.png" width="600">  
+<img src="https://user-images.githubusercontent.com/39071652/126661333-eb9f5d1c-d850-459e-b246-2208ee4ac0ba.png" width="500">  
 한 번에 하나의 요청만을 수행할 수 있기 때문에 각각의 작업을 요청받은 순서대로 처리하면 다음과 같이 처리 됩니다.  
-<>  
+<img src="https://user-images.githubusercontent.com/39071652/126743294-268dc891-014c-4731-89e4-76076354d133.png" width="500">  
   + *A: 3ms 시점에 작업 완료 (요청에서 종료까지 : 3ms)*  
   + *B: 1ms부터 대기하다가, 3ms 시점에 작업을 시작해서 12ms 시점에 작업 완료(요청에서 종료까지 : 11ms)*  
   + *C: 2sm부터 대가하다가, 12ms 시점에 작업을 시작해서 18ms 시점에 작업 완료(요청에서 종료까지 : 16ms)*  
 
 이 때 각 작업의 요청부터 종료까지 걸리 시간의 평균은 10ms(=(3 + 11 + 16) / 3)가 됩니다.  
 하지만 A->C->B 순서대로 처리하면  
-<>  
+<img src="https://user-images.githubusercontent.com/39071652/126743361-d7f012e6-2edc-4370-aa30-700875368dd0.png" width="500">  
   + *A: 3ms 시점에 작업 완료(요청에서 종료까지 : 3ms)*  
   + *C: 2ms부터 대기하다가, 3ms 시점에 작업을 시작해서 9ms 시점에 작업 완료(요청에서 종료까지 : 7ms)*  
   + *B: 1ms부터 대기하다가, 9ms 시점에 작업을 시작해서 18ms 시점에 작업 완료(요청에서 종료까지 : 17ms)*  
@@ -64,7 +64,7 @@ Level 3 코딩테스트 연습
   + 1ms 시점에 9ms 걸리는 작업 요청이 들어옵니다.
   + 2ms 시점에 6ms 걸리는 작업 요청이 들어옵니다.
 
-###### 코드 :
+###### 코드 : [Disk_Controller.cpp](./Disk_Controller.cpp)
 <br>
 
 ### 동적계획법(Dynamic Programming); DP
