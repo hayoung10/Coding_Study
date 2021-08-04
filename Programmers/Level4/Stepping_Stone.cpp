@@ -8,21 +8,21 @@ int solution(int distance, vector<int> rocks, int n) {
     int answer = 0;
 
     rocks.push_back(distance);
-    sort(rocks.begin(), rocks.end()); // ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
+    sort(rocks.begin(), rocks.end()); // ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬
 
     int left = 0, right = distance;
     while (left <= right) {
-        int mid = (left + right) / 2; // Áß°£°ª
-        int cmp = 0, count = 0; // cpm : ºñ±³´ë»ó, count : Á¦°ÅÇÑ ¹ÙÀ§ÀÇ ¼ö
+        int mid = (left + right) / 2; // ì¤‘ê°„ê°’
+        int cmp = 0, count = 0; // cmp : ë¹„êµëŒ€ìƒ, count : ì œê±°í•œ ë°”ìœ„ì˜ ìˆ˜
 
         for (int i = 0; i < rocks.size(); i++) {
             if (mid > rocks[i] - cmp) count++;
             else cmp = rocks[i];
         }
-        if (count > n) { // ºÒ°¡´É
+        if (count > n) { // ë¶ˆê°€ëŠ¥
             right = mid - 1;
         }
-        else { // °¡´É
+        else { // ê°€ëŠ¥
             answer = max(mid, answer);
             left = mid + 1;
         }
