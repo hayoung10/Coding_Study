@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 using namespace std;
 
 long long answer = 0;
 
-void dfs(vector<vector<int>> graph, vector<long long>& w, int node, int parent) {
+void dfs(vector<vector<int>>& graph, vector<long long>& w, int node, int parent) {
     for (int i = 0; i < graph[node].size(); i++)
         if (graph[node][i] != parent)
             dfs(graph, w, graph[node][i], node);
