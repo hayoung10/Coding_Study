@@ -523,7 +523,6 @@ Level 3 코딩테스트 연습
 입출력 예 #2
 블록의 회전은 가능하지만, 뒤집을 수는 없습니다.  
 
-###### 코드 : [Fill_the_Puzzle_pieces.cpp](./Fill_the_Puzzle_pieces.cpp)
 <br>
 
 ###### 월드 코드 챌린지 시즌2
