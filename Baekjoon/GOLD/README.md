@@ -1,6 +1,7 @@
 백준 Gold 코딩 연습
 
 목표  
+> Gold  
 > 알고리즘  
 > 자료구조  
 > Visual Studio 2019 사용  
