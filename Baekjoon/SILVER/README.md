@@ -2,7 +2,7 @@
 > 몸풀기  
 
 목표  
-> Gold  
+> Silver  
 > 알고리즘  
 > 자료구조  
 > Visual Studio 2019 사용  
